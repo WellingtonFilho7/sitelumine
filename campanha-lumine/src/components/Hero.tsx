@@ -26,7 +26,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#sobre"
-                className="bg-[#0B4F6C] text-white px-8 py-4 rounded-full hover:bg-[#2B7A9B] transition-all inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
+                className="bg-[#0B4F6C] !text-white px-8 py-4 rounded-full hover:bg-[#2B7A9B] transition-all inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
               >
                 <span>Conheça o Lumine</span>
                 <ArrowDown className="w-4 h-4" aria-hidden />

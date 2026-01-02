@@ -127,7 +127,7 @@ export default function App() {
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="#sobre"
-                  className="px-8 py-3 bg-[#0B4F6C] text-white rounded-full hover:bg-[#2B7A9B] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
+                  className="px-8 py-3 bg-[#0B4F6C] !text-white rounded-full hover:bg-[#2B7A9B] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
                 >
                   Conheça o Lumine
                 </a>
