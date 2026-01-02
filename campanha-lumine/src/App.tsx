@@ -259,25 +259,25 @@ export default function App() {
 
         {/* Impacto Esperado */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-[#F8FAFB] to-white" aria-labelledby="impacto-title">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
               <h2 id="impacto-title" className="text-[#0B4F6C] mb-6">
                 Compromisso com impacto real
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
-              <p className="text-[#4A5568] text-lg max-w-3xl mx-auto leading-relaxed text-center">
+              <p className="text-[#4A5568] text-lg max-w-4xl mx-auto leading-relaxed text-center">
                 O Instituto Lumine atua para promover mudanças profundas e duradouras na vida das crianças e de suas comunidades. Seu trabalho busca fortalecer o desenvolvimento acadêmico, a formação de virtudes e a proteção social, oferecendo um ambiente educativo que favorece crescimento, pertencimento e esperança.
               </p>
-              <p className="text-[#4A5568] max-w-3xl mx-auto leading-relaxed mt-4 text-center">
+              <p className="text-[#4A5568] max-w-4xl mx-auto leading-relaxed mt-3 text-center">
                 O impacto do Lumine é pensado de forma responsável, com acompanhamento contínuo, cuidado com as famílias e compromisso com a realidade local.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
               {impactItems.map((item) => (
                 <article
                   key={item.title}
-                  className="bg-white rounded-2xl p-8 border border-[#EFF5F8] hover:shadow-lg transition-all text-center"
+                  className="bg-white rounded-2xl p-7 border border-[#EFF5F8] hover:shadow-lg transition-all text-center w-full max-w-sm flex flex-col gap-4"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-white" aria-hidden />
@@ -292,8 +292,8 @@ export default function App() {
 
         {/* Como Apoiar */}
         <section id="apoiar" className="py-20 md:py-28 bg-white scroll-mt-20" aria-labelledby="apoiar-title">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
               <h2 id="apoiar-title" className="text-[#0B4F6C] mb-6">
                 Caminhe conosco
               </h2>
@@ -331,16 +331,16 @@ export default function App() {
                   Para transferir, use o QR code ou copie o código Pix abaixo no seu banco.
                 </p>
               </div>
-              <div className="mt-10 grid lg:grid-cols-2 gap-10 items-center">
+              <div className="mt-10 grid lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
                 <div className="flex justify-center">
-                  <div className="bg-white rounded-3xl border border-[#EFF5F8] shadow-md p-5">
-                    <div className="text-center mb-4">
+                  <div className="bg-white rounded-3xl border border-[#EFF5F8] shadow-md p-5 max-w-xs w-full">
+                    <div className="text-center mb-3">
                       <p className="text-[#F7941D] font-semibold">Pix • Missão João Pessoa</p>
                     </div>
                     <img
-                      src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=eae0b735-1a54-4b66-a791-3d0dc30aa728"
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=eae0b735-1a54-4b66-a791-3d0dc30aa728"
                       alt="QR code para Pix"
-                      className="w-56 h-56 rounded-2xl border border-[#EFF5F8] bg-white p-3 shadow-sm"
+                      className="w-full rounded-2xl border border-[#EFF5F8] bg-white p-3 shadow-sm"
                       loading="lazy"
                       decoding="async"
                     />
@@ -348,7 +348,7 @@ export default function App() {
                 </div>
                 <div className="space-y-4 text-center lg:text-left">
                   <p className="text-[#4A5568] font-medium">Código Pix (copia e cola):</p>
-                  <div className="bg-white border border-[#EFF5F8] rounded-2xl p-4 text-[#0B4F6C] font-semibold break-all">
+                  <div className="bg-white border border-[#EFF5F8] rounded-full px-5 py-3 text-[#0B4F6C] font-semibold break-all inline-block">
                     {pixKey}
                   </div>
                   <p className="text-[#718096] text-sm">
