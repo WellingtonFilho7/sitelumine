@@ -48,7 +48,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(event) => scrollToSection(event, item.href)}
-                className="text-gray-700 hover:text-[#0B4F6C] px-4 py-2 rounded-lg hover:bg-[#EFF5F8] transition-all font-medium"
+                className="text-gray-700 hover:text-[#0B4F6C] px-4 py-2 rounded-lg hover:bg-[#EFF5F8] transition-all font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
               >
                 {item.label}
               </a>
@@ -56,7 +56,7 @@ export function Header() {
             <a
               href="#apoiar"
               onClick={(event) => scrollToSection(event, '#apoiar')}
-              className="ml-4 bg-[#F7941D] text-white px-6 py-2.5 rounded-full hover:bg-[#E67E00] transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+              className="ml-4 bg-[#F7941D] text-white px-6 py-2.5 rounded-full hover:bg-[#E67E00] transition-all shadow-md hover:shadow-lg transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941D] focus-visible:ring-offset-2"
             >
               Apoiar
             </a>
@@ -84,7 +84,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(event) => scrollToSection(event, item.href)}
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-[#0B4F6C] hover:bg-[#EFF5F8] rounded-lg transition-all font-medium"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-[#0B4F6C] hover:bg-[#EFF5F8] rounded-lg transition-all font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
               >
                 {item.label}
               </a>

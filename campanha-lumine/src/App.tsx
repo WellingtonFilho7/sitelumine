@@ -127,13 +127,13 @@ export default function App() {
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="#sobre"
-                  className="px-8 py-3 bg-[#0B4F6C] text-white rounded-full hover:bg-[#2B7A9B] transition-all"
+                  className="px-8 py-3 bg-[#0B4F6C] text-white rounded-full hover:bg-[#2B7A9B] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
                 >
                   Conheça o Lumine
                 </a>
                 <a
                   href="#apoiar"
-                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#0B4F6C] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all font-semibold"
+                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#0B4F6C] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
                   >
                   Formas de apoiar
                 </a>
