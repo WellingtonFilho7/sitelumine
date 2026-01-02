@@ -48,7 +48,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(event) => scrollToSection(event, item.href)}
-                className="text-[#4A5568] hover:text-[#0B4F6C] px-4 py-2 rounded-lg hover:bg-[#EFF5F8] transition-all"
+                className="text-gray-700 hover:text-[#0B4F6C] px-4 py-2 rounded-lg hover:bg-[#EFF5F8] transition-all font-medium"
               >
                 {item.label}
               </a>
@@ -84,7 +84,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(event) => scrollToSection(event, item.href)}
-                className="block w-full text-left py-3 px-4 text-[#4A5568] hover:text-[#0B4F6C] hover:bg-[#EFF5F8] rounded-lg transition-all"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-[#0B4F6C] hover:bg-[#EFF5F8] rounded-lg transition-all font-medium"
               >
                 {item.label}
               </a>
