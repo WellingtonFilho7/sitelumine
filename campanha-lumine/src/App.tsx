@@ -502,28 +502,28 @@ export default function App() {
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <a
               href="#sobre"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               Sobre o Lumine
             </a>
             <span className="text-white/30">•</span>
             <a
               href="#apoiar"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               Como apoiar
             </a>
             <span className="text-white/30">•</span>
             <a
               href="#faq"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               FAQ
             </a>
             <span className="text-white/30">•</span>
             <a
               href="#contato"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               Contato
             </a>
