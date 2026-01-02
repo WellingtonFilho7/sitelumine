@@ -98,10 +98,10 @@ export default function App() {
 
         {/* Pilares Institucionais */}
         <section className="py-20 md:py-28 bg-white" aria-labelledby="pilares-title">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="text-center mb-12 space-y-4">
               <h2 id="pilares-title" className="text-[#0B4F6C] mb-4">
-                Nossos pilares
+                Como transformamos vidas
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full"></div>
             </div>
@@ -137,13 +137,65 @@ export default function App() {
           </div>
         </section>
 
+        {/* Nossa Proposta Educacional */}
+        <section className="py-20 md:py-28 bg-white" aria-labelledby="proposta-title">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="space-y-7">
+                <div>
+                  <h2 id="proposta-title" className="text-[#0B4F6C] mb-6">
+                    O método que funciona
+                  </h2>
+                  <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] rounded-full mb-6"></div>
+                </div>
+
+                <p className="text-[#4A5568] text-lg leading-relaxed">
+                  A proposta educacional do Lumine se fundamenta na educação cristã clássica, que compreende o aprendizado como um processo formativo integral. O ensino não se limita à transmissão de conteúdos, mas busca cultivar virtudes, hábitos de pensamento, amor pela verdade e senso de responsabilidade.
+                </p>
+
+                <p className="text-[#4A5568] leading-relaxed text-center lg:text-left">
+                  A criança é acompanhada em suas dimensões intelectual, emocional, social e espiritual, por meio de práticas pedagógicas que valorizam a leitura, a linguagem, as artes, a vida prática, o movimento e o cuidado.
+                </p>
+
+                <div className="bg-[#F8FAFB] p-6 rounded-2xl border border-[#EFF5F8]">
+                  <h4 className="text-[#0B4F6C] mb-4">Ênfases pedagógicas</h4>
+                  <ul className="space-y-3">
+                    {[
+                      "Alfabetização e linguagem",
+                      "Leitura orientada e formação do hábito leitor",
+                      "Artes e expressão criativa",
+                      "Atividades físicas e vida prática",
+                      "Acompanhamento pedagógico e cuidado integral",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-[#F7941D] flex-shrink-0 mt-1" aria-hidden />
+                        <span className="text-[#4A5568]">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="rounded-3xl overflow-hidden shadow-xl">
+                  <ImageWithFallback
+                    src="https://images.unsplash.com/photo-1574758324765-a29c77fb9c91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraWRzJTIwc3R1ZHlpbmclMjBoYXBweXxlbnwxfHx8fDE3NjQyOTQ4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Crianças estudando"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Quem Somos */}
         <section
           id="sobre"
           className="py-20 md:py-28 bg-gradient-to-b from-[#F8FAFB] to-white scroll-mt-20"
           aria-labelledby="sobre-title"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="relative order-last lg:order-first">
                 <div className="rounded-3xl overflow-hidden shadow-xl">
@@ -155,7 +207,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="space-y-8">
+              <div className="space-y-7">
                 <div>
                   <h2 id="sobre-title" className="text-[#0B4F6C] mb-6">
                     Quem somos
@@ -205,64 +257,12 @@ export default function App() {
           </div>
         </section>
 
-        {/* Nossa Proposta Educacional */}
-        <section className="py-20 md:py-28 bg-white" aria-labelledby="proposta-title">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="space-y-8">
-                <div>
-                  <h2 id="proposta-title" className="text-[#0B4F6C] mb-6">
-                    Educação cristã clássica
-                  </h2>
-                  <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] rounded-full mb-6"></div>
-                </div>
-
-                <p className="text-[#4A5568] text-lg leading-relaxed">
-                  A proposta educacional do Lumine se fundamenta na educação cristã clássica, que compreende o aprendizado como um processo formativo integral. O ensino não se limita à transmissão de conteúdos, mas busca cultivar virtudes, hábitos de pensamento, amor pela verdade e senso de responsabilidade.
-                </p>
-
-                <p className="text-[#4A5568] leading-relaxed text-center lg:text-left">
-                  A criança é acompanhada em suas dimensões intelectual, emocional, social e espiritual, por meio de práticas pedagógicas que valorizam a leitura, a linguagem, as artes, a vida prática, o movimento e o cuidado.
-                </p>
-
-                <div className="bg-[#F8FAFB] p-6 rounded-2xl border border-[#EFF5F8]">
-                  <h4 className="text-[#0B4F6C] mb-4">Ênfases pedagógicas</h4>
-                  <ul className="space-y-3">
-                    {[
-                      "Alfabetização e linguagem",
-                      "Leitura orientada e formação do hábito leitor",
-                      "Artes e expressão criativa",
-                      "Atividades físicas e vida prática",
-                      "Acompanhamento pedagógico e cuidado integral",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#F7941D] flex-shrink-0 mt-1" aria-hidden />
-                        <span className="text-[#4A5568]">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-xl">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1574758324765-a29c77fb9c91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraWRzJTIwc3R1ZHlpbmclMjBoYXBweXxlbnwxfHx8fDE3NjQyOTQ4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="Crianças estudando"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Impacto Esperado */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-[#F8FAFB] to-white" aria-labelledby="impacto-title">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="text-center mb-14 space-y-4">
               <h2 id="impacto-title" className="text-[#0B4F6C] mb-6">
-                Compromisso com impacto real
+                Resultados reais
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
               <p className="text-[#4A5568] text-lg max-w-4xl mx-auto leading-relaxed text-center">
@@ -273,7 +273,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-7 justify-items-center">
               {impactItems.map((item) => (
                 <article
                   key={item.title}
@@ -292,10 +292,10 @@ export default function App() {
 
         {/* Como Apoiar */}
         <section id="apoiar" className="py-20 md:py-28 bg-white scroll-mt-20" aria-labelledby="apoiar-title">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="text-center mb-14 space-y-4">
               <h2 id="apoiar-title" className="text-[#0B4F6C] mb-6">
-                Caminhe conosco
+                Faça parte
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
               <p className="text-[#4A5568] text-lg max-w-4xl mx-auto leading-relaxed text-center">
@@ -306,7 +306,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12 items-stretch">
+            <div className="grid md:grid-cols-2 gap-10 mb-12 items-stretch">
               {supportOptions.map((option) => (
                 <article
                   key={option.title}

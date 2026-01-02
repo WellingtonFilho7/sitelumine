@@ -13,10 +13,10 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-[#0B4F6C] leading-tight">
-                Educação cristã clássica a serviço da formação integral de crianças
+                Formação integral de crianças
               </h1>
               <p className="text-[#4A5568] text-xl leading-relaxed max-w-xl">
-                O Instituto Lumine é uma iniciativa educacional sem fins lucrativos que atua na formação intelectual, moral e espiritual de crianças em situação de vulnerabilidade social.
+                Através da educação cristã clássica
               </p>
               <p className="text-[#718096] text-lg leading-relaxed max-w-xl">
                 Fundamentado nos princípios da educação cristã clássica, o Lumine entende o conhecimento como um caminho de verdade, bondade e beleza, e a educação como um serviço à pessoa e à comunidade.
