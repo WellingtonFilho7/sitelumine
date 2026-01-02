@@ -126,7 +126,7 @@ export default function App() {
                 </a>
                 <a
                   href="#apoiar"
-                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#0B4F6C] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all"
+                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#F7941D] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all"
                 >
                   Formas de apoiar
                 </a>
@@ -263,10 +263,10 @@ export default function App() {
                 Compromisso com impacto real
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
-              <p className="text-[#4A5568] text-lg max-w-3xl mx-auto leading-relaxed">
+              <p className="text-[#4A5568] text-lg max-w-3xl mx-auto leading-relaxed text-center">
                 O Instituto Lumine atua para promover mudanças profundas e duradouras na vida das crianças e de suas comunidades. Seu trabalho busca fortalecer o desenvolvimento acadêmico, a formação de virtudes e a proteção social, oferecendo um ambiente educativo que favorece crescimento, pertencimento e esperança.
               </p>
-              <p className="text-[#4A5568] max-w-3xl mx-auto leading-relaxed mt-4">
+              <p className="text-[#4A5568] max-w-3xl mx-auto leading-relaxed mt-4 text-center">
                 O impacto do Lumine é pensado de forma responsável, com acompanhamento contínuo, cuidado com as famílias e compromisso com a realidade local.
               </p>
             </div>
@@ -275,7 +275,7 @@ export default function App() {
               {impactItems.map((item) => (
                 <article
                   key={item.title}
-                  className="bg-white rounded-2xl p-8 border border-[#EFF5F8] hover:shadow-lg transition-all"
+                  className="bg-white rounded-2xl p-8 border border-[#EFF5F8] hover:shadow-lg transition-all text-center"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-white" aria-hidden />
@@ -296,10 +296,10 @@ export default function App() {
                 Caminhe conosco
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
-              <p className="text-[#4A5568] text-lg max-w-3xl mx-auto leading-relaxed">
+              <p className="text-[#4A5568] text-lg max-w-3xl mx-auto leading-relaxed text-center">
                 O trabalho do Instituto Lumine é sustentado por pessoas, famílias e instituições que acreditam na educação como instrumento de cuidado e transformação social. Existem diferentes formas de apoiar o Lumine, de acordo com a realidade e o desejo de cada apoiador.
               </p>
-              <p className="text-[#4A5568] max-w-3xl mx-auto leading-relaxed mt-4">
+              <p className="text-[#4A5568] max-w-3xl mx-auto leading-relaxed mt-4 text-center">
                 O apoio pode acontecer por meio de contribuições financeiras, doações de materiais, parcerias institucionais ou relacionamento contínuo com a causa.
               </p>
             </div>
@@ -308,7 +308,7 @@ export default function App() {
               {supportOptions.map((option) => (
                 <article
                   key={option.title}
-                  className="bg-gradient-to-br from-white to-[#F8FAFB] rounded-2xl p-8 border border-[#EFF5F8]"
+                  className="bg-gradient-to-br from-white to-[#F8FAFB] rounded-2xl p-8 border border-[#EFF5F8] text-center"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-6">
                     <option.icon className="w-7 h-7 text-white" aria-hidden />
@@ -317,6 +317,35 @@ export default function App() {
                   <p className="text-[#4A5568] leading-relaxed mb-6">{option.description}</p>
                 </article>
               ))}
+            </div>
+
+            <div className="bg-gradient-to-br from-[#F8FAFB] to-white rounded-3xl p-8 border border-[#EFF5F8] shadow-sm mb-12">
+              <div className="text-center space-y-3">
+                <h3 className="text-[#0B4F6C] text-2xl">Doação via Pix</h3>
+                <p className="text-[#4A5568] leading-relaxed max-w-2xl mx-auto">
+                  Para transferir, use o QR code ou copie o código Pix abaixo no seu banco.
+                </p>
+              </div>
+              <div className="mt-8 grid lg:grid-cols-2 gap-8 items-center">
+                <div className="flex justify-center">
+                  <img
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=eae0b735-1a54-4b66-a791-3d0dc30aa728"
+                    alt="QR code para Pix"
+                    className="w-56 h-56 rounded-2xl border border-[#EFF5F8] bg-white p-3 shadow-sm"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="space-y-4 text-center lg:text-left">
+                  <p className="text-[#4A5568] font-medium">Código Pix (copia e cola):</p>
+                  <div className="bg-white border border-[#EFF5F8] rounded-2xl p-4 text-[#0B4F6C] font-semibold break-all">
+                    eae0b735-1a54-4b66-a791-3d0dc30aa728
+                  </div>
+                  <p className="text-[#718096] text-sm">
+                    Dica: copie o código acima e cole no app do seu banco, ou escaneie o QR code com a câmera.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="text-center space-y-4">

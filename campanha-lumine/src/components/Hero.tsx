@@ -34,7 +34,7 @@ export function Hero() {
               
               <a
                 href="#apoiar"
-                className="border-2 border-[#0B4F6C] text-[#0B4F6C] px-8 py-4 rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all inline-flex items-center justify-center"
+                className="border-2 border-[#0B4F6C] text-[#F7941D] px-8 py-4 rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all inline-flex items-center justify-center"
               >
                 <span>Formas de apoiar</span>
               </a>
