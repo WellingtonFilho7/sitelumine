@@ -461,7 +461,7 @@ export default function App() {
                       href="https://wa.me/5583999101946?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20melhor%20o%20Instituto%20Lumine%20e%20saber%20como%20posso%20apoiar."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#20BA5A] transition-all shadow-lg font-semibold"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#20BA5A] transition-all shadow-lg font-semibold [&]:!text-white"
                     >
                       <MessageCircle className="w-5 h-5" />
                       Falar no WhatsApp
