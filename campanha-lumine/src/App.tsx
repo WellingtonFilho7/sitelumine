@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { FAQ } from "./components/FAQ";
+import { FloatingDonateButton } from "./components/FloatingDonateButton";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import {
   Heart,
@@ -15,6 +16,7 @@ import {
   Target,
   Award,
   ShoppingBag,
+  MessageCircle,
 } from "lucide-react";
 import logoOrange from "figma:asset/5cc9005e4edc31a427bdeaeb8d45d71da74bb01c.png";
 
@@ -435,6 +437,34 @@ export default function App() {
                 <p className="text-[#0B4F6C] font-medium">@instituto.lumine</p>
               </a>
             </div>
+
+            {/* CTA Principal */}
+            <div className="bg-gradient-to-br from-[#0B4F6C] to-[#2B7A9B] rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Pronto para fazer a diferença?
+              </h3>
+              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                Entre em contato agora e descubra como você pode transformar vidas através da educação.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="https://wa.me/5583999101946?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20melhor%20o%20Instituto%20Lumine%20e%20saber%20como%20posso%20apoiar."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#20BA5A] transition-all shadow-lg font-semibold"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Falar no WhatsApp
+                </a>
+                <a
+                  href="mailto:contato@institutolumine.org?subject=Interesse%20em%20apoiar%20o%20Instituto%20Lumine"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0B4F6C] rounded-full hover:bg-white/90 transition-all shadow-lg font-semibold"
+                >
+                  <Mail className="w-5 h-5" />
+                  Enviar e-mail
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -494,6 +524,8 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      <FloatingDonateButton />
     </div>
   );
 }
