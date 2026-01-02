@@ -88,6 +88,8 @@ const supportOptions = [
 ] as const;
 
 export default function App() {
+  const pixKey = "eae0b735-1a54-4b66-a791-3d0dc30aa728";
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -165,7 +167,7 @@ export default function App() {
                   O Instituto Lumine existe para promover uma educação que forme pessoas inteiras. Inspirado pela tradição cristã e pela pedagogia clássica, o Lumine atua no desenvolvimento intelectual, emocional, social e espiritual das crianças, reconhecendo cada uma como portadora de dignidade, vocação e valor.
                 </p>
 
-                <p className="text-[#4A5568] leading-relaxed">
+                <p className="text-[#4A5568] leading-relaxed text-center lg:text-left">
                   Como associação educacional sem fins lucrativos, o Lumine atua em diálogo com famílias, educadores e a comunidade local, buscando oferecer um ambiente de aprendizado sério, acolhedor e comprometido com o bem comum.
                 </p>
 
@@ -219,7 +221,7 @@ export default function App() {
                   A proposta educacional do Lumine se fundamenta na educação cristã clássica, que compreende o aprendizado como um processo formativo integral. O ensino não se limita à transmissão de conteúdos, mas busca cultivar virtudes, hábitos de pensamento, amor pela verdade e senso de responsabilidade.
                 </p>
 
-                <p className="text-[#4A5568] leading-relaxed">
+                <p className="text-[#4A5568] leading-relaxed text-center lg:text-left">
                   A criança é acompanhada em suas dimensões intelectual, emocional, social e espiritual, por meio de práticas pedagógicas que valorizam a leitura, a linguagem, as artes, a vida prática, o movimento e o cuidado.
                 </p>
 
@@ -319,30 +321,35 @@ export default function App() {
               ))}
             </div>
 
-            <div className="bg-gradient-to-br from-[#F8FAFB] to-white rounded-3xl p-8 border border-[#EFF5F8] shadow-sm mb-12">
+            <div className="bg-gradient-to-br from-[#F8FAFB] to-white rounded-3xl p-8 border border-[#EFF5F8] shadow-lg mb-12">
               <div className="text-center space-y-3">
                 <h3 className="text-[#0B4F6C] text-2xl">Doação via Pix</h3>
                 <p className="text-[#4A5568] leading-relaxed max-w-2xl mx-auto">
                   Para transferir, use o QR code ou copie o código Pix abaixo no seu banco.
                 </p>
               </div>
-              <div className="mt-8 grid lg:grid-cols-2 gap-8 items-center">
+              <div className="mt-10 grid lg:grid-cols-2 gap-10 items-center">
                 <div className="flex justify-center">
-                  <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=eae0b735-1a54-4b66-a791-3d0dc30aa728"
-                    alt="QR code para Pix"
-                    className="w-56 h-56 rounded-2xl border border-[#EFF5F8] bg-white p-3 shadow-sm"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="bg-white rounded-3xl border border-[#EFF5F8] shadow-md p-5">
+                    <div className="text-center mb-4">
+                      <p className="text-[#F7941D] font-semibold">Pix • Missão João Pessoa</p>
+                    </div>
+                    <img
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=eae0b735-1a54-4b66-a791-3d0dc30aa728"
+                      alt="QR code para Pix"
+                      className="w-56 h-56 rounded-2xl border border-[#EFF5F8] bg-white p-3 shadow-sm"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                 </div>
                 <div className="space-y-4 text-center lg:text-left">
                   <p className="text-[#4A5568] font-medium">Código Pix (copia e cola):</p>
                   <div className="bg-white border border-[#EFF5F8] rounded-2xl p-4 text-[#0B4F6C] font-semibold break-all">
-                    eae0b735-1a54-4b66-a791-3d0dc30aa728
+                    {pixKey}
                   </div>
                   <p className="text-[#718096] text-sm">
-                    Dica: copie o código acima e cole no app do seu banco, ou escaneie o QR code com a câmera.
+                    Copie o código acima ou escaneie o QR code com o app do seu banco.
                   </p>
                 </div>
               </div>
