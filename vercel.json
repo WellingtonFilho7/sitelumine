@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "framework": "vite",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "outputDirectory": "build",
+  "rootDirectory": "campanha-lumine"
+}
