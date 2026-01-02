@@ -129,7 +129,7 @@ export default function App() {
                 <a
                   href="#apoiar"
                   className="px-8 py-3 border-2 border-[#0B4F6C] text-[#F7941D] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all"
-                >
+                  >
                   Formas de apoiar
                 </a>
               </div>
@@ -298,25 +298,28 @@ export default function App() {
                 Caminhe conosco
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
-              <p className="text-[#4A5568] text-lg max-w-3xl mx-auto leading-relaxed text-center">
+              <p className="text-[#4A5568] text-lg max-w-4xl mx-auto leading-relaxed text-center">
                 O trabalho do Instituto Lumine é sustentado por pessoas, famílias e instituições que acreditam na educação como instrumento de cuidado e transformação social. Existem diferentes formas de apoiar o Lumine, de acordo com a realidade e o desejo de cada apoiador.
               </p>
-              <p className="text-[#4A5568] max-w-3xl mx-auto leading-relaxed mt-4 text-center">
+              <p className="text-[#4A5568] max-w-4xl mx-auto leading-relaxed mt-4 text-center">
                 O apoio pode acontecer por meio de contribuições financeiras, doações de materiais, parcerias institucionais ou relacionamento contínuo com a causa.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-12 items-stretch">
               {supportOptions.map((option) => (
                 <article
                   key={option.title}
-                  className="bg-gradient-to-br from-white to-[#F8FAFB] rounded-2xl p-8 border border-[#EFF5F8] text-center"
+                  className="bg-gradient-to-br from-white to-[#F8FAFB] rounded-2xl p-8 border border-[#EFF5F8] text-center flex flex-col justify-between shadow-sm"
                 >
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-6">
-                    <option.icon className="w-7 h-7 text-white" aria-hidden />
+                  <div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-6 mx-auto">
+                      <option.icon className="w-7 h-7 text-white" aria-hidden />
+                    </div>
+                    <h3 className="text-[#0B4F6C] mb-4">{option.title}</h3>
+                    <p className="text-[#4A5568] leading-relaxed mb-6">{option.description}</p>
                   </div>
-                  <h3 className="text-[#0B4F6C] mb-4">{option.title}</h3>
-                  <p className="text-[#4A5568] leading-relaxed mb-6">{option.description}</p>
+                  <div className="h-1 bg-gradient-to-r from-[#EFF5F8] via-[#F8FAFB] to-[#EFF5F8] rounded-full mt-4"></div>
                 </article>
               ))}
             </div>
