@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { FAQ } from "./components/FAQ";
+import { FloatingDonateButton } from "./components/FloatingDonateButton";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import {
   Heart,
@@ -494,6 +495,8 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      <FloatingDonateButton />
     </div>
   );
 }
