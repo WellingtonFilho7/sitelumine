@@ -133,7 +133,7 @@ export default function App() {
                 </a>
                 <a
                   href="#apoiar"
-                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#F7941D] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all"
+                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#0B4F6C] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all font-semibold"
                   >
                   Formas de apoiar
                 </a>
