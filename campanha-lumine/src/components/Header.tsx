@@ -64,7 +64,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 hover:bg-[#EFF5F8] rounded-lg transition-colors"
+            className="lg:hidden p-3 hover:bg-[#EFF5F8] rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menu"
           >
@@ -84,7 +84,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(event) => scrollToSection(event, item.href)}
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-[#0B4F6C] hover:bg-[#EFF5F8] rounded-lg transition-all font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
+                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-[#0B4F6C] hover:bg-[#EFF5F8] rounded-lg transition-all font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2 min-h-[44px] flex items-center"
               >
                 {item.label}
               </a>
@@ -92,7 +92,7 @@ export function Header() {
             <a
               href="#apoiar"
               onClick={(event) => scrollToSection(event, '#apoiar')}
-              className="block w-full text-center bg-[#F7941D] text-white px-6 py-3 rounded-full hover:bg-[#E67E00] transition-all mt-4 shadow-md"
+              className="block w-full text-center bg-[#F7941D] text-white px-6 py-4 rounded-full hover:bg-[#E67E00] transition-all mt-4 shadow-md min-h-[48px] flex items-center justify-center font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941D] focus-visible:ring-offset-2"
             >
               Apoiar
             </a>
