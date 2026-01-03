@@ -1,6 +1,9 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { FAQ } from "./components/FAQ";
+import { FloatingDonateButton } from "./components/FloatingDonateButton";
+import ContactForm from "./components/ContactForm";
+import ContactSuccess from "./components/ContactSuccess";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import {
   Heart,
@@ -15,6 +18,7 @@ import {
   Target,
   Award,
   ShoppingBag,
+  MessageCircle,
 } from "lucide-react";
 import logoOrange from "figma:asset/5cc9005e4edc31a427bdeaeb8d45d71da74bb01c.png";
 
@@ -89,6 +93,7 @@ const supportOptions = [
 
 export default function App() {
   const pixKey = "eae0b735-1a54-4b66-a791-3d0dc30aa728";
+  const isContactSuccess = window.location.hash === "#contato-sucesso";
 
   return (
     <div className="min-h-screen bg-white">
@@ -122,13 +127,13 @@ export default function App() {
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="#sobre"
-                  className="px-8 py-3 bg-[#0B4F6C] text-white rounded-full hover:bg-[#2B7A9B] transition-all"
+                  className="px-8 py-3 bg-[#0B4F6C] !text-white rounded-full hover:bg-[#2B7A9B] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
                 >
                   Conheça o Lumine
                 </a>
                 <a
                   href="#apoiar"
-                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#F7941D] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all"
+                  className="px-8 py-3 border-2 border-[#0B4F6C] text-[#0B4F6C] rounded-full hover:bg-[#0B4F6C] hover:text-white transition-all font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B4F6C] focus-visible:ring-offset-2"
                   >
                   Formas de apoiar
                 </a>
@@ -440,6 +445,43 @@ export default function App() {
                 <p className="text-[#0B4F6C] font-medium">@instituto.lumine</p>
               </a>
             </div>
+
+            {/* Formulário de Contato ou Página de Sucesso */}
+            {isContactSuccess ? (
+              <ContactSuccess />
+            ) : (
+              <>
+                <ContactForm />
+                
+                {/* CTA Alternativo */}
+                <div className="mt-12 bg-gradient-to-br from-[#0B4F6C] to-[#2B7A9B] rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    Prefere outro canal?
+                  </h3>
+                  <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                    Entre em contato diretamente através do WhatsApp ou e-mail.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a
+                      href="https://wa.me/5583999101946?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20melhor%20o%20Instituto%20Lumine%20e%20saber%20como%20posso%20apoiar."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#20BA5A] transition-all shadow-lg font-semibold [&]:!text-white"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      Falar no WhatsApp
+                    </a>
+                    <a
+                      href="mailto:contato@institutolumine.org?subject=Interesse%20em%20apoiar%20o%20Instituto%20Lumine"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0B4F6C] rounded-full hover:bg-white/90 transition-all shadow-lg font-semibold"
+                    >
+                      <Mail className="w-5 h-5" />
+                      Enviar e-mail
+                    </a>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </section>
       </main>
@@ -465,28 +507,28 @@ export default function App() {
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <a
               href="#sobre"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               Sobre o Lumine
             </a>
             <span className="text-white/30">•</span>
             <a
               href="#apoiar"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               Como apoiar
             </a>
             <span className="text-white/30">•</span>
             <a
               href="#faq"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               FAQ
             </a>
             <span className="text-white/30">•</span>
             <a
               href="#contato"
-              className="text-white/70 hover:text-white transition-colors"
+              className="text-white hover:text-white/90 transition-colors font-medium"
             >
               Contato
             </a>
@@ -499,6 +541,8 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      <FloatingDonateButton />
     </div>
   );
 }
