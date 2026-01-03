@@ -100,7 +100,7 @@ export default function App() {
         <section className="py-20 md:py-28 bg-white" aria-labelledby="pilares-title">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
             <div className="text-center mb-12 space-y-4">
-              <h2 id="pilares-title" className="text-[#0B4F6C] mb-4">
+              <h2 id="pilares-title" className="text-[#0B4F6C] mb-4 text-3xl md:text-4xl font-semibold tracking-tight">
                 Como transformamos vidas
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full"></div>
@@ -112,7 +112,7 @@ export default function App() {
                   <div className="w-16 h-16 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <pillar.icon className="w-8 h-8 text-white" aria-hidden />
                   </div>
-                  <h3 className="text-[#0B4F6C] mb-4">{pillar.title}</h3>
+                  <h3 className="text-[#0B4F6C] mb-4 text-xl font-semibold">{pillar.title}</h3>
                   <p className="text-[#4A5568] leading-relaxed">{pillar.description}</p>
                 </article>
               ))}
@@ -143,22 +143,22 @@ export default function App() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="space-y-7">
                 <div>
-                  <h2 id="proposta-title" className="text-[#0B4F6C] mb-6">
+                  <h2 id="proposta-title" className="text-[#0B4F6C] mb-6 text-3xl md:text-4xl font-semibold tracking-tight">
                     O método que funciona
                   </h2>
                   <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] rounded-full mb-6"></div>
                 </div>
 
-                <p className="text-[#4A5568] text-lg leading-relaxed">
+                <p className="text-[#4A5568] text-lg leading-relaxed text-left">
                   A proposta educacional do Lumine se fundamenta na educação cristã clássica, que compreende o aprendizado como um processo formativo integral. O ensino não se limita à transmissão de conteúdos, mas busca cultivar virtudes, hábitos de pensamento, amor pela verdade e senso de responsabilidade.
                 </p>
 
-                <p className="text-[#4A5568] leading-relaxed text-center lg:text-left">
+                <p className="text-[#4A5568] leading-relaxed text-left">
                   A criança é acompanhada em suas dimensões intelectual, emocional, social e espiritual, por meio de práticas pedagógicas que valorizam a leitura, a linguagem, as artes, a vida prática, o movimento e o cuidado.
                 </p>
 
                 <div className="bg-[#F8FAFB] p-6 rounded-2xl border border-[#EFF5F8]">
-                  <h4 className="text-[#0B4F6C] mb-4">Ênfases pedagógicas</h4>
+                  <h4 className="text-[#0B4F6C] mb-4 text-lg font-semibold">Ênfases pedagógicas</h4>
                   <ul className="space-y-3">
                     {[
                       "Alfabetização e linguagem",
@@ -209,37 +209,37 @@ export default function App() {
 
               <div className="space-y-7">
                 <div>
-                  <h2 id="sobre-title" className="text-[#0B4F6C] mb-6">
+                  <h2 id="sobre-title" className="text-[#0B4F6C] mb-6 text-3xl md:text-4xl font-semibold tracking-tight">
                     Quem somos
                   </h2>
                   <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] rounded-full mb-6"></div>
                 </div>
 
-                <p className="text-[#4A5568] text-lg leading-relaxed">
+                <p className="text-[#4A5568] text-lg leading-relaxed text-left">
                   O Instituto Lumine existe para promover uma educação que forme pessoas inteiras. Inspirado pela tradição cristã e pela pedagogia clássica, o Lumine atua no desenvolvimento intelectual, emocional, social e espiritual das crianças, reconhecendo cada uma como portadora de dignidade, vocação e valor.
                 </p>
 
-                <p className="text-[#4A5568] leading-relaxed text-center lg:text-left">
+                <p className="text-[#4A5568] leading-relaxed text-left">
                   Como associação educacional sem fins lucrativos, o Lumine atua em diálogo com famílias, educadores e a comunidade local, buscando oferecer um ambiente de aprendizado sério, acolhedor e comprometido com o bem comum.
                 </p>
 
                 <div className="bg-white p-6 rounded-2xl border border-[#EFF5F8] space-y-6">
                   <div>
-                    <h4 className="text-[#0B4F6C] mb-3">Missão</h4>
+                    <h4 className="text-[#0B4F6C] mb-3 text-lg font-semibold">Missão</h4>
                     <p className="text-[#4A5568]">
                       Proporcionar educação cristã clássica que forme o caráter, desenvolva a inteligência e fortaleça a vida comunitária de crianças em contextos de vulnerabilidade.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-[#0B4F6C] mb-3">Visão</h4>
+                    <h4 className="text-[#0B4F6C] mb-3 text-lg font-semibold">Visão</h4>
                     <p className="text-[#4A5568]">
                       Ser uma referência em educação complementar cristã, comprometida com a formação integral da criança e com o fortalecimento das comunidades onde atua.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-[#0B4F6C] mb-3">Valores</h4>
+                    <h4 className="text-[#0B4F6C] mb-3 text-lg font-semibold">Valores</h4>
                     <div className="grid sm:grid-cols-2 gap-3">
                       {["Fé cristã", "Excelência educacional", "Formação do caráter", "Serviço e responsabilidade", "Cuidado com a pessoa inteira"].map(
                         (value) => (
@@ -261,7 +261,7 @@ export default function App() {
         <section className="py-20 md:py-28 bg-gradient-to-b from-[#F8FAFB] to-white" aria-labelledby="impacto-title">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
             <div className="text-center mb-14 space-y-4">
-              <h2 id="impacto-title" className="text-[#0B4F6C] mb-6">
+              <h2 id="impacto-title" className="text-[#0B4F6C] mb-6 text-3xl md:text-4xl font-semibold tracking-tight">
                 Resultados reais
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
@@ -282,7 +282,7 @@ export default function App() {
                   <div className="w-12 h-12 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-white" aria-hidden />
                   </div>
-                  <h4 className="text-[#0B4F6C] mb-3">{item.title}</h4>
+                  <h4 className="text-[#0B4F6C] mb-3 text-lg font-semibold">{item.title}</h4>
                   <p className="text-[#4A5568]">{item.description}</p>
                 </article>
               ))}
@@ -294,7 +294,7 @@ export default function App() {
         <section id="apoiar" className="py-20 md:py-28 bg-white scroll-mt-20" aria-labelledby="apoiar-title">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
             <div className="text-center mb-14 space-y-4">
-              <h2 id="apoiar-title" className="text-[#0B4F6C] mb-6">
+              <h2 id="apoiar-title" className="text-[#0B4F6C] mb-6 text-3xl md:text-4xl font-semibold tracking-tight">
                 Faça parte
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full mb-6"></div>
@@ -316,7 +316,7 @@ export default function App() {
                     <div className="w-14 h-14 bg-gradient-to-br from-[#4A90A4] to-[#2B7A9B] rounded-xl flex items-center justify-center mb-6 mx-auto">
                       <option.icon className="w-7 h-7 text-white" aria-hidden />
                     </div>
-                    <h3 className="text-[#0B4F6C] mb-4">{option.title}</h3>
+                  <h3 className="text-[#0B4F6C] mb-4 text-xl font-semibold">{option.title}</h3>
                     <p className="text-[#4A5568] leading-relaxed mb-6">{option.description}</p>
                   </div>
                   <div className="h-1 bg-gradient-to-r from-[#EFF5F8] via-[#F8FAFB] to-[#EFF5F8] rounded-full mt-4"></div>
@@ -326,7 +326,7 @@ export default function App() {
 
             <div className="bg-gradient-to-br from-[#F8FAFB] to-white rounded-3xl p-8 border border-[#EFF5F8] shadow-lg mb-12">
               <div className="text-center space-y-3">
-                <h3 className="text-[#0B4F6C] text-2xl">Doação via Pix</h3>
+                <h3 className="text-[#0B4F6C] text-2xl font-semibold">Doação via Pix</h3>
                 <p className="text-[#4A5568] leading-relaxed max-w-2xl mx-auto">
                   Para transferir, use o QR code ou copie o código Pix abaixo no seu banco.
                 </p>
@@ -402,25 +402,30 @@ export default function App() {
                 </p>
               </a>
 
-              <a
-                href="tel:+5583999101946"
-                className="group bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all border border-[#EFF5F8] hover:border-[#F7941D] hover:-translate-y-1"
-              >
+              <div className="group bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all border border-[#EFF5F8] hover:border-[#F7941D] hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#EFF5F8] to-[#F8FAFB] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Phone className="w-8 h-8 text-[#0B4F6C]" aria-hidden />
                 </div>
                 <p className="text-[#718096] text-sm mb-2">Telefone / WhatsApp</p>
                 <p className="text-[#0B4F6C] font-medium">(83) 99910-1946</p>
                 <p className="text-[#0B4F6C] font-medium">(83) 99994-3792</p>
-                <a
-                  href="https://wa.me/5583999101946"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0B4F6C] text-sm underline block mt-2"
-                >
-                  Fale pelo WhatsApp
-                </a>
-              </a>
+                <div className="flex flex-col gap-2 mt-3">
+                  <a
+                    href="tel:+5583999101946"
+                    className="text-[#0B4F6C] underline text-sm font-semibold"
+                  >
+                    Ligar
+                  </a>
+                  <a
+                    href="https://wa.me/5583999101946"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#0B4F6C] underline text-sm font-semibold"
+                  >
+                    Fale pelo WhatsApp
+                  </a>
+                </div>
+              </div>
 
               <a
                 href="https://instagram.com/instituto.lumine"

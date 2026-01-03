@@ -12,7 +12,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-[#0B4F6C] leading-tight">
+              <h1 className="text-[#0B4F6C] leading-tight text-4xl md:text-5xl font-semibold tracking-tight">
                 Formação integral de crianças
               </h1>
               <p className="text-[#4A5568] text-xl leading-relaxed max-w-xl">
