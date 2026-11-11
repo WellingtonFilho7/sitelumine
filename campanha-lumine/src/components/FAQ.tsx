@@ -1,5 +1,6 @@
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { useReveal } from '../hooks/useReveal';
 
 interface FAQItem {
   question: string;
@@ -8,94 +9,95 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: 'O que é educação cristã clássica?',
-    answer: 'A educação cristã clássica é uma abordagem formativa que integra a tradição cristã com a pedagogia clássica. Valoriza a formação do caráter, o desenvolvimento da inteligência e o cultivo de virtudes, compreendendo o conhecimento como caminho de verdade, bondade e beleza. O ensino busca formar pessoas inteiras, capazes de pensar com clareza, viver com propósito e servir ao bem comum.',
+    question: 'O que é o Instituto Lumine?',
+    answer: 'O Instituto Lumine é uma associação educacional cristã sem fins lucrativos que oferece educação complementar no contraturno escolar para crianças de 4 a 9 anos em situação de vulnerabilidade. Nossa proposta é baseada na educação cristã clássica, com foco em alfabetização, formação de caráter e cuidado integral da criança.',
   },
   {
-    question: 'Como o Instituto Lumine está estruturado?',
-    answer: 'O Instituto Lumine é uma associação civil sem fins lucrativos, com Estatuto Social registrado, CNPJ próprio e estrutura de governança que inclui Diretoria Executiva e Conselho Fiscal. A organização opera de acordo com as leis brasileiras e boas práticas de gestão do terceiro setor, com total transparência e prestação de contas.',
+    question: 'Como o dinheiro das doações será usado?',
+    answer: 'A meta de R$ 22.000 é destinada exclusivamente à estrutura inicial para abertura: climatização do espaço, mobiliário básico, fardamento e preparação do ambiente. Após a inauguração em março de 2026, as doações recorrentes mantêm o funcionamento: alimentação das crianças, materiais pedagógicos, equipe e manutenção do espaço.',
   },
   {
-    question: 'Quem pode se beneficiar dos programas do Instituto?',
-    answer: 'O Instituto Lumine trabalha prioritariamente com crianças em situação de vulnerabilidade social, oferecendo educação complementar de qualidade. O trabalho é feito em parceria com as famílias, buscando fortalecer o desenvolvimento integral das crianças em todas as suas dimensões: intelectual, emocional, social e espiritual.',
+    question: 'Como posso acompanhar o projeto?',
+    answer: 'Você pode acompanhar o Instituto Lumine pelo Instagram (@instituto.lumine), onde compartilhamos atualizações sobre o projeto. Também enviamos comunicados periódicos para nossos apoiadores. Se preferir um contato mais direto, entre em contato pelo WhatsApp ou e-mail.',
   },
   {
-    question: 'Como posso apoiar o Instituto Lumine?',
-    answer: 'Existem várias formas de apoio: contribuições mensais recorrentes, doações pontuais, parcerias institucionais com igrejas ou empresas, doação de materiais pedagógicos, livros e equipamentos. Entre em contato conosco para conhecer as possibilidades e encontrar a forma de apoio mais adequada à sua realidade.',
+    question: 'O Instituto Lumine já está funcionando?',
+    answer: 'Ainda não. Estamos nos preparativos finais para iniciar o projeto piloto com 24 crianças em Gurinhém, no interior da Paraíba. A abertura está prevista para março de 2026. Este é o momento de construir a estrutura inicial e garantir que possamos começar com responsabilidade.',
   },
   {
-    question: 'O Instituto Lumine presta contas de suas atividades?',
-    answer: 'Sim. O Instituto Lumine segue boas práticas de governança e transparência. A organização não distribui lucros, aplica seus recursos integralmente em suas finalidades educacionais e mantém compromisso com a prestação de contas aos seus apoiadores e à sociedade.',
+    question: 'Posso visitar o Instituto Lumine?',
+    answer: 'Sim! Após a abertura, receberemos visitantes com agendamento prévio. Entre em contato pelo WhatsApp (83) 99910-1946 ou e-mail contato@institutolumine.org para agendar uma visita ou conversar sobre o projeto.',
   },
 ];
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const ref = useReveal();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-gradient-to-b from-white to-[#F8FAFB] scroll-mt-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#EFF5F8] to-[#F8FAFB] rounded-2xl mb-6">
-            <HelpCircle className="w-8 h-8 text-[#0B4F6C]" />
-          </div>
-          <h2 className="text-[#0B4F6C] mb-6">Perguntas frequentes</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#F7941D] to-[#E67E00] mx-auto rounded-full"></div>
+    <section
+      ref={ref}
+      id="faq"
+      className="reveal py-20 md:py-28 bg-[#FAF7F2] scroll-mt-20"
+    >
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12">
+          <h2 className="text-[#0B4F6C] mb-3">
+            Perguntas frequentes
+          </h2>
+          <div className="w-6 h-0.5 bg-[#E8850F]"></div>
         </div>
-        
-        <div className="space-y-4">
+
+        <div className="divide-y divide-[#E5DED4]">
           {faqData.map((item, index) => (
             <div
               key={index}
-              className="bg-white border-2 border-[#EFF5F8] rounded-2xl overflow-hidden transition-all hover:border-[#F7941D] hover:shadow-lg"
+              className={`transition-all duration-300 ${
+                openIndex === index ? 'border-l-2 border-l-[#E8850F] pl-4 -ml-4' : 'border-l-2 border-l-transparent pl-4 -ml-4'
+              }`}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center p-6 text-left group transition-colors"
+                className="w-full flex items-center gap-4 py-6 text-left group"
               >
-                <h4 className="text-[#0B4F6C] pr-4 group-hover:text-[#F7941D] transition-colors">
+                <span className="text-[#9CA3AF] text-xs font-medium tabular-nums flex-shrink-0 w-5">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h4
+                  className="text-[#0B4F6C] pr-4 group-hover:text-[#E8850F] transition-colors flex-1"
+                  style={{ fontFamily: '"Libre Baskerville", serif' }}
+                >
                   {item.question}
                 </h4>
-                <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                  openIndex === index 
-                    ? 'bg-[#F7941D] text-white' 
-                    : 'bg-[#EFF5F8] text-[#0B4F6C] group-hover:bg-[#F7941D] group-hover:text-white'
-                }`}>
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-300 ${
-                      openIndex === index ? 'transform rotate-180' : ''
-                    }`}
-                  />
-                </div>
+                <ChevronDown
+                  className={`w-4 h-4 flex-shrink-0 transition-all duration-300 ${
+                    openIndex === index ? 'rotate-180 text-[#E8850F]' : 'text-[#9CA3AF]'
+                  }`}
+                />
               </button>
-              
+
               <div className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'max-h-96' : 'max-h-0'
+                openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
               }`}>
-                <div className="px-6 pb-6 pt-2">
-                  <div className="border-t border-[#EFF5F8] pt-4">
-                    <p className="text-[#4A5568] leading-relaxed">{item.answer}</p>
-                  </div>
-                </div>
+                <p className="text-[#3D4550] leading-relaxed pl-9">{item.answer}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-gradient-to-br from-[#EFF5F8] to-[#F8FAFB] p-8 rounded-2xl border border-[#EFF5F8] text-center">
-          <p className="text-[#4A5568] mb-4">
+        <div className="mt-10 pt-8 border-t border-[#E5DED4]">
+          <p className="text-[#6B7280] mb-3">
             Não encontrou a resposta que procurava?
           </p>
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 text-[#0B4F6C] hover:text-[#F7941D] font-semibold transition-colors"
+            className="link-underline text-[#0B4F6C] hover:text-[#E8850F] font-medium transition-colors inline-flex items-center gap-1"
           >
-            <span>Entre em contato conosco</span>
-            <ChevronDown className="w-4 h-4 rotate-[-90deg]" />
+            Entre em contato conosco <span aria-hidden>→</span>
           </a>
         </div>
       </div>
